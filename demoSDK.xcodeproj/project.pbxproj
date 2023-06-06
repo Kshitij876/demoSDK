@@ -14,6 +14,9 @@
 		C96F4D842A2A0E1E009812D8 /* demoSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96F4D832A2A0E1E009812D8 /* demoSDKTests.swift */; };
 		C96F4D8E2A2A0E1E009812D8 /* demoSDKUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96F4D8D2A2A0E1E009812D8 /* demoSDKUITests.swift */; };
 		C96F4D902A2A0E1E009812D8 /* demoSDKUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96F4D8F2A2A0E1E009812D8 /* demoSDKUITestsLaunchTests.swift */; };
+		C97A64562A2DB9180055EC3B /* MetriportSDK in Frameworks */ = {isa = PBXBuildFile; productRef = C97A64552A2DB9180055EC3B /* MetriportSDK */; };
+		C97A64592A2DBF4D0055EC3B /* DeviceBridgeFrameworks in Frameworks */ = {isa = PBXBuildFile; productRef = C97A64582A2DBF4D0055EC3B /* DeviceBridgeFrameworks */; };
+		C97A645C2A2DF7910055EC3B /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = C97A645B2A2DF7910055EC3B /* Algorithms */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C97A645C2A2DF7910055EC3B /* Algorithms in Frameworks */,
+				C97A64592A2DBF4D0055EC3B /* DeviceBridgeFrameworks in Frameworks */,
+				C97A64562A2DB9180055EC3B /* MetriportSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +151,11 @@
 			dependencies = (
 			);
 			name = demoSDK;
+			packageProductDependencies = (
+				C97A64552A2DB9180055EC3B /* MetriportSDK */,
+				C97A64582A2DBF4D0055EC3B /* DeviceBridgeFrameworks */,
+				C97A645B2A2DF7910055EC3B /* Algorithms */,
+			);
 			productName = demoSDK;
 			productReference = C96F4D6E2A2A0E1D009812D8 /* demoSDK.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +228,11 @@
 				Base,
 			);
 			mainGroup = C96F4D652A2A0E1D009812D8;
+			packageReferences = (
+				C97A64542A2DB9180055EC3B /* XCRemoteSwiftPackageReference "metriport-ios-sdk" */,
+				C97A64572A2DBF4D0055EC3B /* XCRemoteSwiftPackageReference "DeviceBridgeFrameworks" */,
+				C97A645A2A2DF7910055EC3B /* XCRemoteSwiftPackageReference "swift-algorithms" */,
+			);
 			productRefGroup = C96F4D6F2A2A0E1D009812D8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -612,6 +628,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C97A64542A2DB9180055EC3B /* XCRemoteSwiftPackageReference "metriport-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/metriport/metriport-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		C97A64572A2DBF4D0055EC3B /* XCRemoteSwiftPackageReference "DeviceBridgeFrameworks" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Kshitij876/DeviceBridgeFrameworks.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.1;
+			};
+		};
+		C97A645A2A2DF7910055EC3B /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C97A64552A2DB9180055EC3B /* MetriportSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C97A64542A2DB9180055EC3B /* XCRemoteSwiftPackageReference "metriport-ios-sdk" */;
+			productName = MetriportSDK;
+		};
+		C97A64582A2DBF4D0055EC3B /* DeviceBridgeFrameworks */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C97A64572A2DBF4D0055EC3B /* XCRemoteSwiftPackageReference "DeviceBridgeFrameworks" */;
+			productName = DeviceBridgeFrameworks;
+		};
+		C97A645B2A2DF7910055EC3B /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C97A645A2A2DF7910055EC3B /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C96F4D662A2A0E1D009812D8 /* Project object */;
 }

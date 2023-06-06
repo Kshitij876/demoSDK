@@ -6,12 +6,23 @@
 //
 
 import SwiftUI
+import DeviceBridgeFrameworks
+import MetriportSDK
 
 @main
 struct demoSDKApp: App {
+    
+    
+    
+    init(){
+        DeviceBridgeFrameworks.doSomeWork()
+
+    }
     var body: some Scene {
         WindowGroup {
             ContentView()
+
+            
         }
     }
 }

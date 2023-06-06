@@ -7,10 +7,14 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
     @State private var name: String = ""
     @State private var password: String = ""
     let verticalPaddingForForm = 40.0
+    
+    var nameText = "Kshitij"
+
     var body: some View {
         ZStack {
             RadialGradient(gradient: Gradient(colors: [.blue, .red]), center: .center, startRadius: 100, endRadius: 470)
@@ -27,7 +31,6 @@ struct ContentView: View {
                 .padding()
                 .background(Color.white)
                 .cornerRadius(10)
-                
                 HStack {
                     Image("icons8-key-50")
                         .resizable()
